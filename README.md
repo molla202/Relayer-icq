@@ -39,8 +39,8 @@ chains:
   gaia:
     key: wallet
     chain-id: GAIA
-    rpc-addr: **http://95.214.55.4:26667**
-    grpc-addr: **http://95.214.55.4:9092**
+    rpc-addr: **http://95.214.55.4:26667**   #ip adress
+    grpc-addr: **http://95.214.55.4:9092**   #ip adress
     account-prefix: cosmos
     keyring-backend: test
     gas-adjustment: 1.2
@@ -54,8 +54,8 @@ chains:
   stride:
     key: wallet
     chain-id: STRIDE-TESTNET-2
-    rpc-addr: **http://127.0.0.1:26677**
-    grpc-addr: **http://127.0.0.1:9094**
+    rpc-addr: **http://127.0.0.1:26677**   #ip adress
+    grpc-addr: **http://127.0.0.1:9094**   #ip adress
     account-prefix: stride
     keyring-backend: test
     gas-adjustment: 1.2
@@ -92,14 +92,17 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
-
+```
+```
 sudo mv $HOME/icqd.service /etc/systemd/system/
-
+```
 # start service
+```
 sudo systemctl daemon-reload
 sudo systemctl enable icqd
-
+```
 # start icq
+```
 sudo systemctl restart icqd && journalctl -u icqd -f -o cat
-
+```
 **# WAIT 10-15 min before ANY logs will run**
