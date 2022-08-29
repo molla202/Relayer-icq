@@ -1,5 +1,15 @@
 # Relayer-icq
 
+### hata aldıysanız önce bunu
+```
+systemctl stop icqd 
+systemctl disable icqd
+rm /etc/systemd/system/icqd.service* -rf
+rm -rf /usr/local/bin/icq 
+rm $(which icq) -rf 
+rm -rf $HOME/.icq 
+rm -rf $HOME/interchain-queries
+```
 
 ### check go
 
