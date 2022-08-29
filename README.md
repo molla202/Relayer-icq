@@ -53,7 +53,7 @@ chains:
     sign-mode: direct
   stride:
     key: wallet
-    chain-id: STRIDE-TESTNET-2
+    chain-id: STRIDE-TESTNET-4
     rpc-addr: **http://127.0.0.1:26677**   #ip adress
     grpc-addr: **http://127.0.0.1:9094**   #ip adress
     account-prefix: stride
